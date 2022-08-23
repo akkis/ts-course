@@ -62,7 +62,6 @@ const userInter = {
 };
 const add = (x, y) => x + y;
 const subtrack = (x, y) => x - y;
-// Classes
 class Person {
     constructor(id, name) {
         this.id = id;
@@ -74,4 +73,13 @@ class Person {
 }
 const brad = new Person(1, "akkis");
 console.log(brad.register());
+// Subclasses
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(4, "Shawn", "Developer");
+console.log(emp.position);
 //# sourceMappingURL=index.js.map
